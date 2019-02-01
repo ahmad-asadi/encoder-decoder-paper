@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: ieeetr.bst
+Database file #1: ref.bib
+Repeated entry---line 432 of file ref.bib
+ : @inproceedings{lu2017knowing
+ :                             ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "zhou2018end"
+You've used 54 entries,
+            1876 wiz_defined-function locations,
+            738 strings with 14182 characters,
+and the built_in function-call counts, 18142 in all, are:
+= -- 1657
+> -- 881
+< -- 0
++ -- 312
+- -- 258
+* -- 1299
+:= -- 2484
+add.period$ -- 55
+call.type$ -- 54
+change.case$ -- 53
+chr.to.int$ -- 0
+cite$ -- 54
+duplicate$ -- 967
+empty$ -- 1710
+format.name$ -- 258
+if$ -- 4378
+int.to.chr$ -- 0
+int.to.str$ -- 54
+missing$ -- 55
+newline$ -- 166
+num.names$ -- 54
+pop$ -- 306
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 646
+stack$ -- 0
+substring$ -- 1332
+swap$ -- 396
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 165
+width$ -- 56
+write$ -- 491
+(There was 1 error message)

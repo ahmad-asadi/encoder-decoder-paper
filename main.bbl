@@ -1,0 +1,285 @@
+\begin{thebibliography}{10}
+
+\bibitem{lopez2008statistical}
+A.~Lopez, ``Statistical machine translation,'' {\em ACM Computing Surveys
+  (CSUR)}, vol.~40, no.~3, p.~8, 2008.
+
+\bibitem{cho2014learning}
+K.~Cho, B.~Van~Merri{\"e}nboer, C.~Gulcehre, D.~Bahdanau, F.~Bougares,
+  H.~Schwenk, and Y.~Bengio, ``Learning phrase representations using rnn
+  encoder-decoder for statistical machine translation,'' {\em arXiv preprint
+  arXiv:1406.1078}, 2014.
+
+\bibitem{cho2014properties}
+K.~Cho, B.~Van~Merri{\"e}nboer, D.~Bahdanau, and Y.~Bengio, ``On the properties
+  of neural machine translation: Encoder-decoder approaches,'' {\em arXiv
+  preprint arXiv:1409.1259}, 2014.
+
+\bibitem{gehring2016convolutional}
+J.~Gehring, M.~Auli, D.~Grangier, and Y.~N. Dauphin, ``A convolutional encoder
+  model for neural machine translation,'' {\em arXiv preprint
+  arXiv:1611.02344}, 2016.
+
+\bibitem{hochreiter1997long}
+S.~Hochreiter and J.~Schmidhuber, ``Long short-term memory,'' {\em Neural
+  computation}, vol.~9, no.~8, pp.~1735--1780, 1997.
+
+\bibitem{sutskever2014sequence}
+I.~Sutskever, O.~Vinyals, and Q.~V. Le, ``Sequence to sequence learning with
+  neural networks,'' in {\em Advances in neural information processing
+  systems}, pp.~3104--3112, 2014.
+
+\bibitem{bahdanau2014neural}
+D.~Bahdanau, K.~Cho, and Y.~Bengio, ``Neural machine translation by jointly
+  learning to align and translate,'' {\em arXiv preprint arXiv:1409.0473},
+  2014.
+
+\bibitem{luong2015stanford}
+M.-T. Luong and C.~D. Manning, ``Stanford neural machine translation systems
+  for spoken language domains,'' in {\em Proceedings of the International
+  Workshop on Spoken Language Translation}, pp.~76--79, 2015.
+
+\bibitem{xu2015show}
+K.~Xu, J.~Ba, R.~Kiros, K.~Cho, A.~Courville, R.~Salakhudinov, R.~Zemel, and
+  Y.~Bengio, ``Show, attend and tell: Neural image caption generation with
+  visual attention,'' in {\em International conference on machine learning},
+  pp.~2048--2057, 2015.
+
+\bibitem{mi2016coverage}
+H.~Mi, B.~Sankaran, Z.~Wang, and A.~Ittycheriah, ``Coverage embedding models
+  for neural machine translation,'' {\em arXiv preprint arXiv:1605.03148},
+  2016.
+
+\bibitem{he2016dual}
+D.~He, Y.~Xia, T.~Qin, L.~Wang, N.~Yu, T.-Y. Liu, and W.-Y. Ma, ``Dual learning
+  for machine translation,'' in {\em Advances in Neural Information Processing
+  Systems}, pp.~820--828, 2016.
+
+\bibitem{tu2017context}
+Z.~Tu, Y.~Liu, Z.~Lu, X.~Liu, and H.~Li, ``Context gates for neural machine
+  translation,'' {\em Transactions of the Association for Computational
+  Linguistics}, vol.~5, pp.~87--99, 2017.
+
+\bibitem{simonyan2014very}
+K.~Simonyan and A.~Zisserman, ``Very deep convolutional networks for
+  large-scale image recognition,'' {\em arXiv preprint arXiv:1409.1556}, 2014.
+
+\bibitem{krizhevsky2012imagenet}
+A.~Krizhevsky, I.~Sutskever, and G.~E. Hinton, ``Imagenet classification with
+  deep convolutional neural networks,'' in {\em Advances in neural information
+  processing systems}, pp.~1097--1105, 2012.
+
+\bibitem{deng2009imagenet}
+J.~Deng, W.~Dong, R.~Socher, L.-J. Li, K.~Li, and L.~Fei-Fei, ``Imagenet: A
+  large-scale hierarchical image database,'' in {\em Computer Vision and
+  Pattern Recognition, 2009. CVPR 2009. IEEE Conference on}, pp.~248--255,
+  Ieee, 2009.
+
+\bibitem{karpathy2015deep}
+A.~Karpathy and L.~Fei-Fei, ``Deep visual-semantic alignments for generating
+  image descriptions,'' in {\em Proceedings of the IEEE conference on computer
+  vision and pattern recognition}, pp.~3128--3137, 2015.
+
+\bibitem{chen2017sca}
+L.~Chen, H.~Zhang, J.~Xiao, L.~Nie, J.~Shao, W.~Liu, and T.-S. Chua, ``Sca-cnn:
+  Spatial and channel-wise attention in convolutional networks for image
+  captioning,'' in {\em 2017 IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, pp.~6298--6306, IEEE, 2017.
+
+\bibitem{pedersoli2017areas}
+M.~Pedersoli, T.~Lucas, C.~Schmid, and J.~Verbeek, ``Areas of attention for
+  image captioning,'' in {\em Proceedings of the IEEE International Conference
+  on Computer Vision}, pp.~1242--1250, 2017.
+
+\bibitem{he2016deep}
+K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Deep residual learning for image
+  recognition,'' in {\em Proceedings of the IEEE conference on computer vision
+  and pattern recognition}, pp.~770--778, 2016.
+
+\bibitem{lu2017knowing}
+J.~Lu, C.~Xiong, D.~Parikh, and R.~Socher, ``Knowing when to look: Adaptive
+  attention via a visual sentinel for image captioning,'' in {\em 2017 IEEE
+  conference on computer vision and pattern recognition (CVPR)},
+  pp.~3242--3250, IEEE, 2017.
+
+\bibitem{rennie2017self}
+S.~J. Rennie, E.~Marcheret, Y.~Mroueh, J.~Ross, and V.~Goel, ``Self-critical
+  sequence training for image captioning,'' in {\em Proceedings of the IEEE
+  Conference on Computer Vision and Pattern Recognition}, pp.~7008--7024, 2017.
+
+\bibitem{anderson2017bottom}
+P.~Anderson, X.~He, C.~Buehler, D.~Teney, M.~Johnson, S.~Gould, and L.~Zhang,
+  ``Bottom-up and top-down attention for image captioning and vqa,'' {\em arXiv
+  preprint arXiv:1707.07998}, 2017.
+
+\bibitem{yao2017boosting}
+T.~Yao, Y.~Pan, Y.~Li, Z.~Qiu, and T.~Mei, ``Boosting image captioning with
+  attributes,'' in {\em 2017 IEEE International Conference on Computer Vision
+  (ICCV)}, pp.~4904--4912, IEEE, 2017.
+
+\bibitem{szegedy2016rethinking}
+C.~Szegedy, V.~Vanhoucke, S.~Ioffe, J.~Shlens, and Z.~Wojna, ``Rethinking the
+  inception architecture for computer vision,'' in {\em Proceedings of the IEEE
+  conference on computer vision and pattern recognition}, pp.~2818--2826, 2016.
+
+\bibitem{zhang2017actor}
+L.~Zhang, F.~Sung, F.~Liu, T.~Xiang, S.~Gong, Y.~Yang, and T.~M. Hospedales,
+  ``Actor-critic sequence training for image captioning,'' {\em arXiv preprint
+  arXiv:1706.09601}, 2017.
+
+\bibitem{ioffe2015batch}
+S.~Ioffe and C.~Szegedy, ``Batch normalization: Accelerating deep network
+  training by reducing internal covariate shift,'' {\em arXiv preprint
+  arXiv:1502.03167}, 2015.
+
+\bibitem{vinyals2015show}
+O.~Vinyals, A.~Toshev, S.~Bengio, and D.~Erhan, ``Show and tell: A neural image
+  caption generator,'' in {\em Proceedings of the IEEE conference on computer
+  vision and pattern recognition}, pp.~3156--3164, 2015.
+
+\bibitem{liu2017improved}
+S.~Liu, Z.~Zhu, N.~Ye, S.~Guadarrama, and K.~Murphy, ``Improved image
+  captioning via policy gradient optimization of spider,'' in {\em 2017 IEEE
+  International Conference on Computer Vision (ICCV)}, pp.~873--881, IEEE,
+  2017.
+
+\bibitem{venugopalan2014translating}
+S.~Venugopalan, H.~Xu, J.~Donahue, M.~Rohrbach, R.~Mooney, and K.~Saenko,
+  ``Translating videos to natural language using deep recurrent neural
+  networks,'' {\em arXiv preprint arXiv:1412.4729}, 2014.
+
+\bibitem{szegedy2017inception}
+C.~Szegedy, S.~Ioffe, V.~Vanhoucke, and A.~A. Alemi, ``Inception-v4,
+  inception-resnet and the impact of residual connections on learning.,'' in
+  {\em AAAI}, vol.~4, p.~12, 2017.
+
+\bibitem{yao2015describing}
+L.~Yao, A.~Torabi, K.~Cho, N.~Ballas, C.~Pal, H.~Larochelle, and A.~Courville,
+  ``Describing videos by exploiting temporal structure,'' in {\em Proceedings
+  of the IEEE international conference on computer vision}, pp.~4507--4515,
+  2015.
+
+\bibitem{pan2016jointly}
+Y.~Pan, T.~Mei, T.~Yao, H.~Li, and Y.~Rui, ``Jointly modeling embedding and
+  translation to bridge video and language,'' in {\em Proceedings of the IEEE
+  conference on computer vision and pattern recognition}, pp.~4594--4602, 2016.
+
+\bibitem{li2018jointly}
+Y.~Li, T.~Yao, Y.~Pan, H.~Chao, and T.~Mei, ``Jointly localizing and describing
+  events for dense video captioning,'' in {\em Proceedings of the IEEE
+  Conference on Computer Vision and Pattern Recognition}, pp.~7492--7500, 2018.
+
+\bibitem{krishna2017dense}
+R.~Krishna, K.~Hata, F.~Ren, L.~Fei-Fei, and J.~Carlos~Niebles,
+  ``Dense-captioning events in videos,'' in {\em Proceedings of the IEEE
+  International Conference on Computer Vision}, pp.~706--715, 2017.
+
+\bibitem{escorcia2016daps}
+V.~Escorcia, F.~C. Heilbron, J.~C. Niebles, and B.~Ghanem, ``Daps: Deep action
+  proposals for action understanding,'' in {\em European Conference on Computer
+  Vision}, pp.~768--784, Springer, 2016.
+
+\bibitem{shen2017weakly}
+Z.~Shen, J.~Li, Z.~Su, M.~Li, Y.~Chen, Y.-G. Jiang, and X.~Xue, ``Weakly
+  supervised dense video captioning,'' in {\em 2017 IEEE Conference on Computer
+  Vision and Pattern Recognition (CVPR)}, pp.~5159--5167, IEEE, 2017.
+
+\bibitem{duan2018weakly}
+X.~Duan, W.~Huang, C.~Gan, J.~Wang, W.~Zhu, and J.~Huang, ``Weakly supervised
+  dense event captioning in videos,'' in {\em Advances in Neural Information
+  Processing Systems}, pp.~3063--3073, 2018.
+
+\bibitem{wang2018bidirectional}
+J.~Wang, W.~Jiang, L.~Ma, W.~Liu, and Y.~Xu, ``Bidirectional attentive fusion
+  with context gating for dense video captioning,'' in {\em Proceedings of the
+  IEEE Conference on Computer Vision and Pattern Recognition}, pp.~7190--7198,
+  2018.
+
+\bibitem{goodfellow2016deep}
+I.~Goodfellow, Y.~Bengio, A.~Courville, and Y.~Bengio, {\em Deep learning},
+  vol.~1, p.~334.
+\newblock MIT press Cambridge, 2016.
+
+\bibitem{luong2015effective}
+M.-T. Luong, H.~Pham, and C.~D. Manning, ``Effective approaches to
+  attention-based neural machine translation,'' {\em arXiv preprint
+  arXiv:1508.04025}, 2015.
+
+\bibitem{wu2016google}
+Y.~Wu, M.~Schuster, Z.~Chen, Q.~V. Le, M.~Norouzi, W.~Macherey, M.~Krikun,
+  Y.~Cao, Q.~Gao, K.~Macherey, {\em et~al.}, ``Google's neural machine
+  translation system: Bridging the gap between human and machine translation,''
+  {\em arXiv preprint arXiv:1609.08144}, 2016.
+
+\bibitem{johnson2017google}
+M.~Johnson, M.~Schuster, Q.~V. Le, M.~Krikun, Y.~Wu, Z.~Chen, N.~Thorat,
+  F.~Vi{\'e}gas, M.~Wattenberg, G.~Corrado, {\em et~al.}, ``Google’s
+  multilingual neural machine translation system: Enabling zero-shot
+  translation,'' {\em Transactions of the Association for Computational
+  Linguistics}, vol.~5, pp.~339--351, 2017.
+
+\bibitem{luong2014addressing}
+M.-T. Luong, I.~Sutskever, Q.~V. Le, O.~Vinyals, and W.~Zaremba, ``Addressing
+  the rare word problem in neural machine translation,'' {\em arXiv preprint
+  arXiv:1410.8206}, 2014.
+
+\bibitem{donahue2015long}
+J.~Donahue, L.~Anne~Hendricks, S.~Guadarrama, M.~Rohrbach, S.~Venugopalan,
+  K.~Saenko, and T.~Darrell, ``Long-term recurrent convolutional networks for
+  visual recognition and description,'' in {\em Proceedings of the IEEE
+  conference on computer vision and pattern recognition}, pp.~2625--2634, 2015.
+
+\bibitem{gu2018stack}
+J.~Gu, J.~Cai, G.~Wang, and T.~Chen, ``Stack-captioning: Coarse-to-fine
+  learning for image captioning,'' in {\em Thirty-Second AAAI Conference on
+  Artificial Intelligence}, 2018.
+
+\bibitem{pan2016hierarchical}
+P.~Pan, Z.~Xu, Y.~Yang, F.~Wu, and Y.~Zhuang, ``Hierarchical recurrent neural
+  encoder for video representation with application to captioning,'' in {\em
+  Proceedings of the IEEE Conference on Computer Vision and Pattern
+  Recognition}, pp.~1029--1038, 2016.
+
+\bibitem{yu2016video}
+H.~Yu, J.~Wang, Z.~Huang, Y.~Yang, and W.~Xu, ``Video paragraph captioning
+  using hierarchical recurrent neural networks,'' in {\em Proceedings of the
+  IEEE conference on computer vision and pattern recognition}, pp.~4584--4593,
+  2016.
+
+\bibitem{Asadi2019stacked}
+A.~Asadi and R.~Safabakhsh, ``Deeper is better: ....,'' in {\em Submitted to
+  Neurocomputing}, 2019.
+
+\bibitem{wang2018video}
+X.~Wang, W.~Chen, J.~Wu, Y.-F. Wang, and W.~Yang~Wang, ``Video captioning via
+  hierarchical reinforcement learning,'' in {\em Proceedings of the IEEE
+  Conference on Computer Vision and Pattern Recognition}, pp.~4213--4222, 2018.
+
+\bibitem{vedantam2015cider}
+R.~Vedantam, C.~Lawrence~Zitnick, and D.~Parikh, ``Cider: Consensus-based image
+  description evaluation,'' in {\em Proceedings of the IEEE conference on
+  computer vision and pattern recognition}, pp.~4566--4575, 2015.
+
+\bibitem{banerjee2005meteor}
+S.~Banerjee and A.~Lavie, ``Meteor: An automatic metric for mt evaluation with
+  improved correlation with human judgments,'' in {\em Proceedings of the acl
+  workshop on intrinsic and extrinsic evaluation measures for machine
+  translation and/or summarization}, pp.~65--72, 2005.
+
+\bibitem{papineni2002bleu}
+K.~Papineni, S.~Roukos, T.~Ward, and W.-J. Zhu, ``Bleu: a method for automatic
+  evaluation of machine translation,'' in {\em Proceedings of the 40th annual
+  meeting on association for computational linguistics}, pp.~311--318,
+  Association for Computational Linguistics, 2002.
+
+\bibitem{you2016image}
+Q.~You, H.~Jin, Z.~Wang, C.~Fang, and J.~Luo, ``Image captioning with semantic
+  attention,'' in {\em Proceedings of the IEEE conference on computer vision
+  and pattern recognition}, pp.~4651--4659, 2016.
+
+\bibitem{wu2018hierarchical}
+C.~Wu, Y.~Wei, X.~Chu, S.~Weichen, F.~Su, and L.~Wang, ``Hierarchical
+  attention-based multimodal fusion for video captioning,'' {\em
+  Neurocomputing}, vol.~315, pp.~362--370, 2018.
+
+\end{thebibliography}
