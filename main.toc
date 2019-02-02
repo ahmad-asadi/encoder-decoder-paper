@@ -1,22 +1,22 @@
-\contentsline {section}{\numberline {1}Abstract}{2}{section.1}
-\contentsline {section}{\numberline {2}Baseline Encoder-Decoder Model}{3}{section.2}
-\contentsline {subsection}{\numberline {2.1}Behind the idea and introduction}{3}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Problems can be solved by encoder-decoder framework}{4}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}The baseline encoder-decoder model for machine translation}{6}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Formulation}{6}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}Encoder Structure}{8}{subsubsection.2.3.2}
-\contentsline {subsubsection}{\numberline {2.3.3}Decoder (language modeling)}{9}{subsubsection.2.3.3}
-\contentsline {section}{\numberline {3}Different Encoders and Their Applications}{10}{section.3}
-\contentsline {subsection}{\numberline {3.1}Sentence as Input}{11}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Image as Input}{11}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Video as Input}{12}{subsection.3.3}
-\contentsline {section}{\numberline {4}Decoder Structures}{18}{section.4}
-\contentsline {subsection}{\numberline {4.1}Reinforcement learning}{18}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}How to make deeper decoders}{18}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Stacked RNN}{18}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Bidirectional RNN}{18}{subsection.4.4}
-\contentsline {section}{\numberline {5}Attention Mechanism}{18}{section.5}
-\contentsline {subsection}{\numberline {5.1}Soft and hard attention}{18}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Long term dependencies}{18}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Self attention}{18}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}Can attention replace CNNs and RNNs?}{18}{subsection.5.4}
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}
+\contentsline {section}{\numberline {2}Baseline Encoder-Decoder Model}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}Background}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Encoder-Decoder Framework's Applications}{5}{subsection.2.2}
+\contentsline {section}{\numberline {3}The encoder-decoder model for machine translation}{7}{section.3}
+\contentsline {subsubsection}{\numberline {3.0.1}Formulation}{7}{subsubsection.3.0.1}
+\contentsline {subsubsection}{\numberline {3.0.2}Encoders (feature extraction)}{10}{subsubsection.3.0.2}
+\contentsline {subsubsection}{\numberline {3.0.3}Decoders (language modeling)}{10}{subsubsection.3.0.3}
+\contentsline {section}{\numberline {4}Encoder Structures}{12}{section.4}
+\contentsline {subsection}{\numberline {4.1}Sentence as input}{12}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Image as input}{13}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Video as input}{14}{subsection.4.3}
+\contentsline {section}{\numberline {5}Decoder Structures}{21}{section.5}
+\contentsline {subsection}{\numberline {5.1}Long term dependencies}{21}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}LSTMs}{21}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Stacked RNNs}{22}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.3.1}Vanishing gradients in stacked decoders}{24}{subsubsection.5.3.1}
+\contentsline {subsection}{\numberline {5.4}Reinforcement learning}{25}{subsection.5.4}
+\contentsline {section}{\numberline {6}Attention Mechanism}{29}{section.6}
+\contentsline {subsection}{\numberline {6.1}Basic Mechanism}{29}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Extensions}{31}{subsection.6.2}
+\contentsline {section}{\numberline {7}Conclusion}{31}{section.7}

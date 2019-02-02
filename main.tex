@@ -65,9 +65,11 @@
 		\end{keyword}
 		
 	\end{frontmatter}
-	
-%	\tableofcontents
-%	\newpage
+
+\newpage	
+	\tableofcontents
+
+	\newpage
 
 	
 	\section{Introduction}
@@ -99,7 +101,7 @@
 		Figure \ref{fig:encdec} demonstrates the basic schema of the encoder-decoder framework. Let $X = \{X_0, X_1, \cdots, X_n\}$ denote the inputs and $Y = \{Y_0, Y_1, \cdots, Y_m\}$ denote the outputs of the problem. The decoder extracts a feature vector from the input and passes it to the decoder. The decoder then generates the output based on the features extracted by the encoder.
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.5]{Imgs/encoder_decoder.png}
+			\includegraphics[scale=0.4]{Imgs/encoder_decoder.png}
 			\caption{The basic scheme of the encoder-decoder model}
 			\label{fig:encdec}
 		\end{figure}
@@ -164,7 +166,7 @@
 		The structure of the proposed model is show in figure \ref{fig:encdec1}. The context vector extracted by the encoder is denoted by $C$, which is the hidden state of the RNN encoder at the last step.
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.5]{Imgs/encdec1.png}
+			\includegraphics[scale=0.6]{Imgs/encdec1.png}
 			\caption{An illustration of the first encoder-decoder based model proposed by Cho et al. \cite{cho2014learning}.}
 			\label{fig:encdec1}
 		\end{figure}
@@ -194,7 +196,7 @@
 		
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.5]{Imgs/BNI.png}
+			\includegraphics[scale=0.4]{Imgs/BNI.png}
 			\caption{Directed Acyclic Graph of dependecies of random variables in the encoder-decoder model}
 			\label{fig:BNI}
 		\end{figure}
@@ -303,7 +305,7 @@
 		
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.5]{Imgs/dense1.png}
+			\includegraphics[scale=0.4]{Imgs/dense1.png}
 			\caption{An illustration of the first proposed encoder model for dense video captioning by Krishna et al. \cite{krishna2017dense}}
 			\label{fig:dense1}
 		\end{figure}
@@ -388,7 +390,7 @@
 		
 		\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.7]{Imgs/reinf2.png}
+		\includegraphics[scale=0.8]{Imgs/reinf2.png}
 		\caption{An illustration of the unrolled decoder proposed by Wang et al. \cite{wang2018video}.}
 		\label{fig:reinf2}
 	\end{figure}
