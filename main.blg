@@ -8,45 +8,45 @@ Repeated entry---line 432 of file ref.bib
  :                             ,
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "zhou2018end"
-You've used 54 entries,
+You've used 57 entries,
             1876 wiz_defined-function locations,
-            738 strings with 14182 characters,
-and the built_in function-call counts, 18142 in all, are:
-= -- 1657
-> -- 881
+            749 strings with 14668 characters,
+and the built_in function-call counts, 18999 in all, are:
+= -- 1736
+> -- 923
 < -- 0
-+ -- 312
-- -- 258
-* -- 1299
-:= -- 2484
-add.period$ -- 55
-call.type$ -- 54
-change.case$ -- 53
++ -- 327
+- -- 270
+* -- 1358
+:= -- 2606
+add.period$ -- 58
+call.type$ -- 57
+change.case$ -- 56
 chr.to.int$ -- 0
-cite$ -- 54
-duplicate$ -- 967
-empty$ -- 1710
-format.name$ -- 258
-if$ -- 4378
+cite$ -- 57
+duplicate$ -- 1012
+empty$ -- 1791
+format.name$ -- 270
+if$ -- 4584
 int.to.chr$ -- 0
-int.to.str$ -- 54
-missing$ -- 55
-newline$ -- 166
-num.names$ -- 54
-pop$ -- 306
+int.to.str$ -- 57
+missing$ -- 58
+newline$ -- 175
+num.names$ -- 57
+pop$ -- 320
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 646
+skip$ -- 675
 stack$ -- 0
-substring$ -- 1332
-swap$ -- 396
+substring$ -- 1388
+swap$ -- 413
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 165
-width$ -- 56
-write$ -- 491
+while$ -- 174
+width$ -- 59
+write$ -- 517
 (There was 1 error message)

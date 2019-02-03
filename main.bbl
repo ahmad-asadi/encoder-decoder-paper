@@ -153,6 +153,14 @@ C.~Szegedy, S.~Ioffe, V.~Vanhoucke, and A.~A. Alemi, ``Inception-v4,
   inception-resnet and the impact of residual connections on learning.,'' in
   {\em AAAI}, vol.~4, p.~12, 2017.
 
+\bibitem{majd2018correlation}
+M.~Majd and R.~Safabakhsh, ``Correlational convolutional lstm for human action
+  recognition,'' {\em Submitted to Neurocomputing}, 2019.
+
+\bibitem{majd2019motion}
+M.~Majd and R.~Safabakhsh, ``A motion-aware convlstm network for action
+  recognition,'' {\em Applied Intelligence}, pp.~1--7, 2019.
+
 \bibitem{yao2015describing}
 L.~Yao, A.~Torabi, K.~Cho, N.~Ballas, C.~Pal, H.~Larochelle, and A.~Courville,
   ``Describing videos by exploiting temporal structure,'' in {\em Proceedings
@@ -247,7 +255,8 @@ H.~Yu, J.~Wang, Z.~Huang, Y.~Yang, and W.~Xu, ``Video paragraph captioning
   2016.
 
 \bibitem{Asadi2019stacked}
-A.~Asadi and R.~Safabakhsh, ``Deeper is better: ....,'' in {\em Submitted to
+A.~Asadi and R.~Safabakhsh, ``Deeper is better: An encoder-decoder based model
+  for image captioning using deep stacked decoder,'' in {\em Submitted to
   Neurocomputing}, 2019.
 
 \bibitem{wang2018video}
@@ -281,5 +290,10 @@ Q.~You, H.~Jin, Z.~Wang, C.~Fang, and J.~Luo, ``Image captioning with semantic
 C.~Wu, Y.~Wei, X.~Chu, S.~Weichen, F.~Su, and L.~Wang, ``Hierarchical
   attention-based multimodal fusion for video captioning,'' {\em
   Neurocomputing}, vol.~315, pp.~362--370, 2018.
+
+\bibitem{vaswani2017attention}
+A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez,
+  {\L}.~Kaiser, and I.~Polosukhin, ``Attention is all you need,'' in {\em
+  Advances in Neural Information Processing Systems}, pp.~5998--6008, 2017.
 
 \end{thebibliography}

@@ -10,6 +10,8 @@
 \contentsline {subsection}{\numberline {4.1}Sentence as input}{12}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Image as input}{13}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}Video as input}{14}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}3D-CNNs}{16}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.2}Dense video captioning}{18}{subsubsection.4.3.2}
 \contentsline {section}{\numberline {5}Decoder Structures}{21}{section.5}
 \contentsline {subsection}{\numberline {5.1}Long term dependencies}{21}{subsection.5.1}
 \contentsline {subsection}{\numberline {5.2}LSTMs}{21}{subsection.5.2}

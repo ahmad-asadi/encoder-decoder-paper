@@ -51,6 +51,9 @@
 		\begin{abstract}
 %			Generating textual descriptions for images has been an attractive problem for the computer vision and natural language processing researchers in recent years. Dozens of models have been proposed to solve this problem based on deep learning. Existing approaches are based on neural encoder-decoder structures equipped with the attention mechanism and try to enable decoders to generate fine-grained captions. In this work, we propose a new approach to make deeper stacked decoders able to extract complex features to generate caption for the input image. In addition a novel semantic attention mechanism that guides attention points through image, taking the meaning of the previously generated word into account is proposed. We evaluate the proposed approach with the MS-COCO dataset. The depth of the proposed stacked decoder is increased from 2 layers to 8 layers using the introduced methodology. Furthermore, proposed model outperformed the state of the art models especially in generating longer captions.
 %			The proposed method gained a CIDEr score equal to 125.0 and a BLEU-4 score equal to 50.5 while the best scores of the state of the art models are 117.1 and 48.0 respectively. 
+
+		Neural encoder-decoder framework have advanced the state-of-the-art in machine translation. Recently there has been interest in employing encoder-decoder based models to solve sophisticated tasks such as image/video captioning,  textual/visual question answering, and text summarization. In this work we study the baseline encoder-decoder framework in machine translation. We also take a brief look at encoder structures proposed to cope with the difficulties of feature extraction. Furthermore, an empirical study of solutions to enable decoders to generate richer fine-grained output sentences is provided in this work. Finally, the attention mechanism which is a technique to cope with long term dependencies and to improve encoder-decoder performance on sophisticated tasks, is surveyed. 
+		
 		\end{abstract}
 		
 		\begin{keyword}
@@ -61,16 +64,10 @@
 			
 			%% MSC codes here, in the form: \MSC code \sep code
 			%% or \MSC[2008] code \sep code (2000 is the default)
-			
+			Encoder-decoder framework \sep machine translation \sep image captioning \sep video caption generation \sep question answering \sep long term dependencies \sep attention mechanism	
 		\end{keyword}
 		
 	\end{frontmatter}
-
-	\newpage	
-	
-	\tableofcontents
-
-	\newpage
 
 	
 	\section{Introduction}
@@ -82,11 +79,45 @@
 	
 	A wide variety of encoders are proposed to encode different types of inputs. Convolutional neural networks are typically used in encoding image and video inputs. Recurrent neural networks are widely used as encoders where the input is a sequence of structured data or sentence. In addition, more complex structures of different neural networks have been used to model complexities in inputs. Hierarchical CNN-RNN structures are examples of neural combinations which are widely used to represent temporal dependencies in videos which are used in video description generation.
 	
-	Modeling long-term dependencies is an important issue that researchers should cope with while designing neural decoders. So a wide variety of techniques are used to model longer dependencies, such as trying to make deeper decoders by stacking RNNs, applying more nonlinearities, and modeling local and global temporal structures in a hierarchical manner.
+%	Modeling long-term dependencies is an important issue that researchers should cope with while designing neural decoders. So a wide variety of techniques are used to model longer dependencies, such as trying to make deeper decoders by stacking RNNs, applying more nonlinearities, and modeling local and global temporal structures in a hierarchical manner.
 	
 	Another potential issue with this baseline encoder–decoder approach is that the encoder has to compress all the necessary information of the input into a fixed-size tensor. This may make it difficult for the neural network to model temporal dependencies in both input and output. Attention mechanism is introduced to overcome the problem of fixed-length feature extraction as an extension to the encoder–decoder model. The distinguishing feature of this approach from the baseline encoder–decoder is that it does not attempt to encode a whole input into a single fixed-size tensor. Instead, it encodes the input into a sequence of annotation vectors and selects a combination of these vectors adaptively while decoding and generating the output in each step.
 	
 	The first section of this chapter introduces the baseline encoder-decoder model and its application in machine translation. Section 2, discusses different types of encoders and their applications in details and makes a general perspective of encoder structures in different problems. Section 3, provides a comprehensive study of decoder structures, techniques of making deeper decoders, along with their applications in image/video caption generation. Section 4, introduces the attention mechanism and its usage in machine translation, Following by an empirical study of the attention mechanism in other problems.
+	
+			\subsection{Encoder-Decoder Framework's Applications}
+	The encoder-decoder framework is an architecture typically used to solve problems in which the model is supposed to generate a sequential output in response to a given input. The desired output is mostly in the form of a text describing the input.
+	
+	Some of the tasks in which the encoder-decoder model is used to solve the problem are as follows:
+	\begin{enumerate}
+		\item Machine Translation:\\
+		"\textit{Machine translation}" (MT) is the task of generating a sentence in a destination language which has the same meaning as the given sentence from a source language. Two different approaches exists in machine translation. 
+		
+		The first approach, called "\textit{statistical machine translation}" (SMT), is characterized by the use of statistical machine learning techniques in order to automatically translate the sentence from the source language to the destination language. In less than two decades SMT has come to dominate academic machine translation research\cite{lopez2008statistical}. 
+		
+		The second approach is called "\textit{Neural Machine Translation}" (NMT). In this category, the encoder-decoder framework was first proposed by Cho et al. in 2014 \cite{cho2014learning}. In the Cho et al.'s model \cite{cho2014learning}, a neural network is used to extract features from the input sentence and another neural network is used to generate a sentence word by word from the destination language using the extracted feature vector. 
+		
+		In the neural structures used in NMT, a neural network is trained to map the input sequence (the input sentence as a sequence of words) to the output sequence. This kind of learning is known as "\textit{Sequence to Sequence Learning}".
+		
+		Evaluations on the early models of NMT showed that although the generated translations are correct, the model faces extreme problems when translating long sentences\cite{cho2014properties}. The problem of modeling "\textit{long term dependencies}" is one of the most important challenges in the encoder-decoder models. We will drill into that and take a look at the proposed solutions, later in this chapter.
+		
+		\item Image/Video Captioning:\\
+		Image captioning and video captioning are the problems of associating a textual description to a given image or video which holistically describes the objects and events presented in the input. A wide variety of approaches have been proposed to solve these problems, including probabilistic graphical models (PGMs) and neural encoder-decoder based models.
+		
+		Encoder-decoder based models for image captioning use a Convolutional Neural Network (CNN) as an encoder to extract a feature vector from the input image and pass it to a Recurrent Neural Network (RNN) as the decoder to generate the caption. The model architecture in this task is the same as that of machine translation except that the encoder uses a CNN to encode the image rather than an RNN.
+		
+		In video captioning, also called "\textit{video description generation}", a similar model based on the encoder-decoder architecture is employed to generate a caption for the input video. In video captioning models, the encoder typically consists of CNNs or combination of CNNs and RNNs to encode the input video and the decoder is the same as the decoder in machine translation and image captioning. 
+		
+		
+		\item Textual/Visual Question Answering:\\
+		Textual and visual question answering are the problems of generating an answer to a given question about an article and about an input image, respectively. Models proposed to solve these problems are supposed to generate a short or long answer, given a pair of an article and a question about it or an image and a question about it as the input. The base model architecture is then similar to that of machine translation except that the encoder is required to extract a feature vector for a pair of inputs. The decoder is the same as the decoder in machine translation and image/video captioning because it is supposed to generate a sentence describing the meaning of the feature vector generated by the encoder.
+		
+		\item Text Summarization:\\
+		Proposed models for summarizing a text are supposed to generate a textual summary for the input text. The only constraint on the output is that it is required to describe the same meaning as the input text and its length should be shorter than that of the input. The base architecture of these models are the same as the architecture proposed in machine translation, except that the generated output here is from the same language as the input. 
+		
+	\end{enumerate}
+	
+	It can be easily seen that the baseline architecture proposed in machine translation is also used in other tasks with minor changes. In addition, the decoders of the models in different tasks are similar since most of them are used to generate a sentence word by word to describe the meaning of the input represented by the feature  vector. On the other side, a wide variety of encoders are used in order to extract appropriate feature vectors depending on the input types in different tasks. 
 	
 	\section{Baseline Encoder-Decoder Model}
 	In this section, we introduce the very baseline encoder-decoder model. To give a clear picture of the idea, the basic structure is represented to solve the machine translation task in which the model is designed to translate a sentence from a source language to a destination one.  
@@ -100,46 +131,13 @@
 		\end{enumerate} 
 	
 		Figure \ref{fig:encdec} demonstrates the basic schema of the encoder-decoder framework. Let $X = \{X_0, X_1, \cdots, X_n\}$ denote the inputs and $Y = \{Y_0, Y_1, \cdots, Y_m\}$ denote the outputs of the problem. The decoder extracts a feature vector from the input and passes it to the decoder. The decoder then generates the output based on the features extracted by the encoder.
-		\begin{figure}[H]
+		\begin{figure}[h]
 			\centering
 			\includegraphics[scale=0.4]{Imgs/encoder_decoder.png}
 			\caption{The basic scheme of the encoder-decoder model}
 			\label{fig:encdec}
 		\end{figure}
 		
-		\subsection{Encoder-Decoder Framework's Applications}
-		The encoder-decoder framework is an architecture typically used to solve problems in which the model is supposed to generate a sequential output in response to a given input. The desired output is mostly in the form of a text describing the input.
-		
-		Some of the tasks in which the encoder-decoder model is used to solve the problem are as follows:
-		\begin{enumerate}
-			\item Machine Translation:\\
-			"\textit{Machine translation}" (MT) is the task of generating a sentence in a destination language which has the same meaning as the given sentence from a source language. Two different approaches exists in machine translation. 
-			
-			The first approach, called "\textit{statistical machine translation}" (SMT), is characterized by the use of statistical machine learning techniques in order to automatically translate the sentence from the source language to the destination language. In less than two decades SMT has come to dominate academic machine translation research\cite{lopez2008statistical}. 
-			
-			The second approach is called "\textit{Neural Machine Translation}" (NMT). In this category, the encoder-decoder framework was first proposed by Cho et al. in 2014 \cite{cho2014learning}. In the Cho et al.'s model \cite{cho2014learning}, a neural network is used to extract features from the input sentence and another neural network is used to generate a sentence word by word from the destination language using the extracted feature vector. 
-			
-			In the neural structures used in NMT, a neural network is trained to map the input sequence (the input sentence as a sequence of words) to the output sequence. This kind of learning is known as "\textit{Sequence to Sequence Learning}".
-			
-			 Evaluations on the early models of NMT showed that although the generated translations are correct, the model faces extreme problems when translating long sentences\cite{cho2014properties}. The problem of modeling "\textit{long term dependencies}" is one of the most important challenges in the encoder-decoder models. We will drill into that and take a look at the proposed solutions, later in this chapter.
-			
-			\item Image/Video Captioning:\\
-			Image captioning and video captioning are the problems of associating a textual description to a given image or video which holistically describes the objects and events presented in the input. A wide variety of approaches have been proposed to solve these problems, including probabilistic graphical models (PGMs) and neural encoder-decoder based models.
-			
-			Encoder-decoder based models for image captioning use a Convolutional Neural Network (CNN) as an encoder to extract a feature vector from the input image and pass it to a Recurrent Neural Network (RNN) as the decoder to generate the caption. The model architecture in this task is the same as that of machine translation except that the encoder uses a CNN to encode the image rather than an RNN.
-			
-			In video captioning, also called "\textit{video description generation}", a similar model based on the encoder-decoder architecture is employed to generate a caption for the input video. In video captioning models, the encoder typically consists of CNNs or combination of CNNs and RNNs to encode the input video and the decoder is the same as the decoder in machine translation and image captioning. 
-			
-			
-			\item Textual/Visual Question Answering:\\
-			Textual and visual question answering are the problems of generating an answer to a given question about an article and about an input image, respectively. Models proposed to solve these problems are supposed to generate a short or long answer, given a pair of an article and a question about it or an image and a question about it as the input. The base model architecture is then similar to that of machine translation except that the encoder is required to extract a feature vector for a pair of inputs. The decoder is the same as the decoder in machine translation and image/video captioning because it is supposed to generate a sentence describing the meaning of the feature vector generated by the encoder.
-			
-			\item Text Summarization:\\
-			Proposed models for summarizing a text are supposed to generate a textual summary for the input text. The only constraint on the output is that it is required to describe the same meaning as the input text and its length should be shorter than that of the input. The base architecture of these models are the same as the architecture proposed in machine translation, except that the generated output here is from the same language as the input. 
-			
-		\end{enumerate}
-	
-	It can be easily seen that the baseline architecture proposed in machine translation is also used in other tasks with minor changes. In addition, the decoders of the models in different tasks are similar since most of them are used to generate a sentence word by word to describe the meaning of the input represented by the feature  vector. On the other side, a wide variety of encoders are used in order to extract appropriate feature vectors depending on the input types in different tasks. 
 	
 	\section{The encoder-decoder model for machine translation}
 	Machine translation is the problem in which the encoder-decoder based models originated and proposed first. The Basic concepts of these models are shaped and presented in machine translation literature. So, in this section we will introduce the basic encoder-decoder structure proposed for machine translation by Cho et al. \cite{cho2014learning} to shed light on the model and its basics.
@@ -149,7 +147,7 @@
 		
 		A one-hot vector is a vector whose components are all zero except for one of them. In order to create a one-hot vector for each word, first a dictionary\footnote{A dictionary is a list of unique words with unique indexes} of all possible words in the available datasets is created. Assuming $N$ words in the dictionary, an $N$-dimensional zero vector for each word is created and the component with the same index as the word in the dictionary is set to 1. Figure \ref{fig:onehot} demonstrates the one-hot vector for each word in a sample dictionary. Assuming the dictionary $D$ has 5 words "I", "cat", "dog", "have", "a" sequentially with the indices 0 to 4, one-hot vector for each word is displayed in the figure.
 		
-		\begin{figure}[H]
+		\begin{figure}[h]
 			\centering
 			\includegraphics[scale=0.5]{Imgs/onehot.png}
 			\caption{One-hot vector for each word in a sample dictionary. Sentences can also be modeled using \textit{Bag of Words} (BoW) technique in which the presence of a word in the sentence is considered without any information about the order of words.}
@@ -165,7 +163,7 @@
 		\end{enumerate}
 		
 		The structure of the proposed model is show in figure \ref{fig:encdec1}. The context vector extracted by the encoder is denoted by $C$, which is the hidden state of the RNN encoder at the last step.
-		\begin{figure}[H]
+		\begin{figure}[h]
 			\centering
 			\includegraphics[scale=0.6]{Imgs/encdec1.png}
 			\caption{An illustration of the first encoder-decoder based model proposed by Cho et al. \cite{cho2014learning}.}
@@ -195,7 +193,7 @@
 		
 		On the other hand, according to the encoder-decoder structure, the random variable $C$ directly depends on the random variable $X$, and the random varialbe $Y$ directly depends on the random variable $C$. Figure \ref{fig:BNI} displays the dependency graph between these 3 random variables.
 		
-		\begin{figure}[H]
+		\begin{figure}[h]
 			\centering
 			\includegraphics[scale=0.4]{Imgs/BNI.png}
 			\caption{Directed Acyclic Graph of dependecies of random variables in the encoder-decoder model}
@@ -246,7 +244,7 @@
 		
 		Figure \ref{fig:imgCpt} illustrates the use of CNNs as the encoder in models based on the encoder-decoder framework for image captioning proposed by Vinyals et al. \cite{vinyals2015show}. A similar architecture is used to generate captions in other researches. As it is shown in the figure, the encoder part of the model consists of a CNN extracting feature vector from the input image. The extracted feature vector is then passed to the decoder to generate the appropriate caption. The decoder consists of an RNN which generates the probability of the next word according to \eqref{eq:obj2} at each step.
 		
-		\begin{figure}[H]
+		\begin{figure}[h]
 			\centering
 			\includegraphics[scale=1]{Imgs/CNNImgCpt.png}
 			\caption{Model architecture based on encoder-decoder framework for image captioning \cite{vinyals2015show}}
@@ -267,18 +265,19 @@
 		
 		Different ideas have been employed to propose a good aggregation for video captioning. The first end-to-end encoder-decoder based approach in video description generation proposed by venugopalan et al. in 2014 \cite{venugopalan2014translating} used a mean pooling layer to create the fixed length context vector from the input video. In that model, first a CNN is applied to each frame of the input video. Then a mean pooling layer is applied to create an average feature vector over the set of feature vectors extracted from each frame. The average feature vector is then passed to the decoder to generate the sentence. A stacked RNN structure is used as the decoder.
 		
-		\begin{figure}[H]
+		\begin{figure}[h]
 			\centering
 			\includegraphics[scale=0.5]{Imgs/vid1.png}
 			\caption{An illustration of the first encoder-decoder based model for video description generation proposed by venugopalan et al. in 2015 \cite{venugopalan2014translating}}
 			\label{fig:vid1}
 		\end{figure}
 	
-		Different CNNs have been used to extract feature vectors from frames of the input video. For instance, Yao et al. \cite{yao2017boosting} used Inception V4 \cite{szegedy2017inception} for feature extraction from video frames.
+		Different CNNs have been used to extract feature vectors from frames of the input video. For instance, Yao et al. \cite{yao2017boosting} used Inception V4 \cite{szegedy2017inception} for feature extraction from video frames. Majd et al. \cite{majd2018correlation} proposed an extended version of LSTM cell called "\textit{$C^2LSTM$}" in which the motion data is perceived as well as the spatial features and the temporal dependencies by embedding a correlation modeling layer into the cell. Majd et al. \cite{majd2019motion} also proposed a novel network architecture using previously proposed $C^2LSTM$ as encoder for human action recognition task.
 	
+		\subsubsection{3D-CNNs}
 		Extracting good features from the input video is a challenging task that can highly affect the performance of the proposed model. The extracted context vector from the input video should well express the detailed motions in the video. In order to create an encoder which is able to extract fine motion features from the video, Yao et al. \cite{yao2015describing} proposed a 3D-CNN as the encoder. The structure of this 3D-CNN is illustrated in figure \ref{fig:3dcnn}.
 		
-		\begin{figure}[H]
+		\begin{figure}[h]
 			\centering
 			\includegraphics[scale=0.5]{Imgs/3DCNN.png}
 			\caption{The structure of 3D-CNN proposed by Yao et al. in 2015 \cite{yao2015describing}}
@@ -289,13 +288,14 @@
 		
 		The 3D-CNN proposed by Yao et al. \cite{yao2015describing} is also used along side the typical 2D-CNN in other works. Pan et al. \cite{pan2016jointly} proposed a novel encoder-decoder architecture for video description generation and used the 3D-CNN and the typical 2D-CNN and applied a mean pooling layer to the set of extracted features by each of the CNNs and concatenated the output to generate the context vector of the video. Figure \ref{fig:3dcnn2} illustrates the encoder part of this model.
 		
-		\begin{figure}[H]
+		\begin{figure}[h]
 			\centering
 			\includegraphics[scale=0.5]{Imgs/3DCNN2.png}
 			\caption{An illustration of the encoder part of the proposed model by Pan et al. \cite{pan2016jointly}}
 			\label{fig:3dcnn2}
 		\end{figure}
-
+	
+		\subsubsection{Dense video captioning}
 		Another approach to video captioning includes those methods focusing on "\textit{Dense Video Captioning}". Despite the models that generate a single sentence as the description of the input video, dense video captioning models first detect and localize the existing events in the input video and then generate a description sentence for each of the detected events. 
 		
 		Encoders for dense video captioning are supposed to first detect all of the existing events in the input video. Then for each of the events a quadruple <$t_{start}$, $t_{end}$, $score$, $h$> should be extracted. $t_{start}$ and $t_{end}$ are the starting and ending frame numbers of the specified event. $score$ is the confidence score of the encoder for each of the events. If the $score$ of an event is greater than a threshold, it is reported as an event and its quadruple is passed to the decoder for sentence generation; otherwise, it is ignored. Finally $h$ is the feature vector extracted from the range of frames between $t_{start}$ and $t_{end}$ which is used by the decoder as the context vector of the event to generate a sentence for te event \cite{li2018jointly}. 
@@ -304,7 +304,7 @@
 		
 		Figure \ref{fig:dense1} illustrates the structure of encoder proposed by Krishna et al. \cite{krishna2017dense} for dense video captioning. The proposed encoder is able to extract all events in the input video using a deep action proposal(DAP) module proposed by \cite{escorcia2016daps}. To do this, a 3D-CNN is applied to the input video frames to extract video features. These video features are passed to the DAP module. This module consists of different LSTMs that are applied to the video features sequence in different resolutions and are trained to detect starting and ending points of events. The confidence score of each event is also computed by DAP. The proposed event proposals are then sorted with respect to their ending points and passed sequentially to the decoder. The feature vector of each event is also the hidden state of the corresponding RNN in the DAP. The decoder then generates a sentence for each event using its feature vector as the encoder output.
 		
-		\begin{figure}[H]
+		\begin{figure}[h]
 			\centering
 			\includegraphics[scale=0.4]{Imgs/dense1.png}
 			\caption{An illustration of the first proposed encoder model for dense video captioning by Krishna et al. \cite{krishna2017dense}}
@@ -313,7 +313,7 @@
 	
 		Li et al. \cite{li2018jointly} proposed a novel end-to-end encoder-decoder based approach for dense video captioning which unified the temporal localization of event proposals and sentence generation\cite{li2018jointly}. Figure \ref{fig:dense2} illustrates the structure of this model. \cite{li2018jointly}. Here, instead of using an extra DAP module, a 12 layer convolutional structure is designed to extract features for action proposal over the output of the 3D-CNN. The first 3 layers of the convolutional structure (500D layer and base layers in figure \ref{fig:dense2}) are designed to introduce nonlinearities and decrease the input dimension. The next 9 layers, which are called "Anchor layers", extract features from different resolutions to be used for event prediction. The "Prediction Layer" consists of three parallel fully connected layers to first regress temporal coordinates ($t_{start}$ and $t_{end}$) of each event, then compute the descriptiveness of the event ($score$) and finally classify the event vs background. The prediction layer is applied to the output of all anchor layers to enable the model to detect events from different resolutions. The extracted proposals are then passed to the proposal ranking module which ranks event proposals with respect to their ending time. Finally the events are passed to the decoder for sentence generation sequentially.
 		
-		\begin{figure}[H]
+		\begin{figure}[h]
 			\centering
 			\includegraphics[scale=0.5]{Imgs/dense2.png}
 			\caption{An illustration of the encoder-decoder structure proposed by Li et al. for dense video captioning \cite{li2018jointly}}
@@ -341,9 +341,9 @@
 		The idea of employing a stacked structure of RNNs as the decoder is also used in models proposed for video description generation. Venugopalan et al. \cite{venugopalan2014translating} proposed the first decoder in neural encoder-decoder based approaches for video description generation with a simple stacked structure. Figure \ref{fig:stacked} demonstrates the architecture of a sample stacked decoder. Blocks tagged with "C" display the input at each step. The red line illustrates the shortest path from the first step to the output in the model. Since the length of the shortest path from the first step to the output correlates with the testing and the training time of the model, decreasing this length decreases the testing and the training time of the model. 
 		
 		
-		\begin{figure}[H]
+		\begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.5]{Imgs/stacked.png}
+	\includegraphics[scale=0.4]{Imgs/stacked.png}
 	\caption{Stacked structure of RNNs \cite{pan2016hierarchical}}
 	\label{fig:stacked}
 \end{figure}
@@ -351,9 +351,9 @@
 		Along with the methods using stacked RNNs as decoders, a category of models are proposed which follow a hierarchical fashion to arrange RNNs in decoders in order to enable the models to generate fine-grained output sequences. 
 		
 		In addition, hierarchical RNN structures are also used to enable encoders in the problems with a sequential input to exploit and encode more detailed information from the input. Pan et al. \cite{pan2016hierarchical} proposed an encoder-decoder based model for video description generation with a hierarchical encoder structure. In their model, two layers of different LSTMs are used. The first layer LSTM is applied to all sequence steps in order to exploit low-level features and the second layer LSTM is applied on the output of equally sized subsets of the input sequence steps to exploit the high-level features. Figure \ref{fig:hrne} demonstrates this architecture. The illustrated red line, shows the shortest path from the first step to the output. Comparing structures displayed in figures \ref{fig:stacked} and \ref{fig:hrne} shows that the shortest path from the first step to the output in hierarchical models is much smaller than that of stacked models. Therefore, the efficiency of the hierarchical model is much higher than that of the stacked model.
-				\begin{figure}[H]
+				\begin{figure}[h]
 			\centering
-			\includegraphics[scale=0.5]{Imgs/hrne.png}
+			\includegraphics[scale=0.4]{Imgs/hrne.png}
 			\caption{Hierarchical structure of RNNs \cite{pan2016hierarchical}}
 			\label{fig:hrne}
 		\end{figure}
@@ -373,7 +373,7 @@
 		
 		Figure \ref{fig:reinf1} illustrates the structure of the model proposed by Wang et al.\cite{wang2018video}. The decoder in this work consists of three different modules, namely a manager, a worker, and an internal critic. These three modules are trained using a reinforcement learning method. The manager operates at a lower temporal resolution and emits a goal when needed for the worker, and the worker generates a word for each time step by following the goal proposed by the manager. The internal critic determines if the worker has accomplished the goal and sends a binary segment signal to the manager to help it update goals. 
 		
-		\begin{figure}[H]
+		\begin{figure}[h]
 			\centering
 			\includegraphics[scale=0.5]{Imgs/reinf1.png}
 			\caption{An illustration of the encoder-decoder based model proposed by Wang et al. \cite{wang2018video}. The proposed decoder is trained using reinforcement learning.}
@@ -386,10 +386,10 @@
 			h_t^M = LST&M^M(h_{t-1}^M, [c_t^M, h_{t-1}^W]) \label{eq:reinf1} \\
 			g_t &= u_M(h_t^M) \label{eq:reinf2}
 		\end{align}
-		
+		\\
 		$LSTM^M$ denotes the LSTM function used in manager, $u_m$ is the function projecting hidden states to the semantic goal, $h_{t-1}^M$ is the hidden state of the manager LSTM at previous time step, and $g_t$ is the vector of semantic goal generated at time step $t$.
 		
-		\begin{figure}[H]
+		\begin{figure}[h]
 		\centering
 		\includegraphics[scale=0.8]{Imgs/reinf2.png}
 		\caption{An illustration of the unrolled decoder proposed by Wang et al. \cite{wang2018video}.}
@@ -488,8 +488,20 @@
 		
 		\subsection{Extensions}
 		Attention mechanism is also used in other tasks. You et al. \cite{you2016image} proposed a semantic attention in image captioning. Lu et al. \cite{lu2017knowing} also proposed an adaptive version of the attention mechanism in image captioning. Gao et al. proposed an encoder-decoder based model using the attention mechanism and introduced a novel approach to train the attention weights to decrease the semantic gap of the generated caption. Wu et al. \cite{wu2018hierarchical} also proposed a novel encoder-decoder based model for video captioning which is able to select from different information sources like motion, temporal, audio and semantic features of the input video to generate caption describing the input video.
-
+		
+		Vaswani \cite{vaswani2017attention} showed that the attention mechanism not only can be used instead of convolutional and recurrent layers in network architecture, but also outperforms their functionality and decreases the computation complexity of the network training. Vaswani et al. \cite{vaswani2017attention} proposed a novel neural architecture in which all of the convolutional and recurrent layers of the networks are substituted with attention layers.
+		
 		\section{Conclusion}
+		In this chapter, we study the baseline encoder-decoder model proposed in machine translation. The main idea in encoder-decoder framework is to split the process of generating often textual output describing the input into two subprocesses. In this framework, a feature vector is first extracted by an encoder from the input. Then a decoder is used to generate the output, step by step using the feature vector extracted by the encoder. 
+		
+		The structure of the encoder varies based on the input type. Whenever the input is a text or a sequence an RNN is used as encoder. In situations that an image is given as input CNNs can be used to encode the input image. In cases that the input is a video a combination of CNNs and RNNs is used to first extract features from all of the input frames and then model temporal dependencies between different frames. 3D-CNNs are also proposed to extract motion data from the input. More complex models to detect and localize events in the input video for dense video captioning are also studied.
+		
+		Extracting long term dependencies and generating rich fine-grained sentences are the main problems of decoders in encoder-decoder based models. LSTM cells are the simplest models that can cope with the problem of long term dependencies which is used in the proposed models in different tasks. Using stacked structures of RNNs is another approach to make deeper decoders which enables the models to cope with the long term dependencies challenge and generate more detailed sentences. One of the most important problems of stacked decoder structures is the problem of vanishing gradients which can be solved by modifying the optimization problem of the decoder. Another approach to cope with the problem of long term dependencies is using the attention mechanism. The attention mechanism is a technique to focus more to different portions of the input while generating outputs at each step. 
+		\\
+		\\
+	\begin{large}
+		\textbf{References}
+	\end{large}
 		
 	\bibliography{ref}
 	\bibliographystyle{ieeetr}
