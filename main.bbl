@@ -197,6 +197,11 @@ X.~Duan, W.~Huang, C.~Gan, J.~Wang, W.~Zhu, and J.~Huang, ``Weakly supervised
   dense event captioning in videos,'' in {\em Advances in Neural Information
   Processing Systems}, pp.~3063--3073, 2018.
 
+\bibitem{zhou2018end}
+L.~Zhou, Y.~Zhou, J.~J. Corso, R.~Socher, and C.~Xiong, ``End-to-end dense
+  video captioning with masked transformer,'' in {\em Proceedings of the IEEE
+  Conference on Computer Vision and Pattern Recognition}, pp.~8739--8748, 2018.
+
 \bibitem{wang2018bidirectional}
 J.~Wang, W.~Jiang, L.~Ma, W.~Liu, and Y.~Xu, ``Bidirectional attentive fusion
   with context gating for dense video captioning,'' in {\em Proceedings of the
@@ -281,19 +286,24 @@ K.~Papineni, S.~Roukos, T.~Ward, and W.-J. Zhu, ``Bleu: a method for automatic
   meeting on association for computational linguistics}, pp.~311--318,
   Association for Computational Linguistics, 2002.
 
+\bibitem{vaswani2017attention}
+A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez,
+  {\L}.~Kaiser, and I.~Polosukhin, ``Attention is all you need,'' in {\em
+  Advances in Neural Information Processing Systems}, pp.~5998--6008, 2017.
+
 \bibitem{you2016image}
 Q.~You, H.~Jin, Z.~Wang, C.~Fang, and J.~Luo, ``Image captioning with semantic
   attention,'' in {\em Proceedings of the IEEE conference on computer vision
   and pattern recognition}, pp.~4651--4659, 2016.
 
+\bibitem{gao2017video}
+L.~Gao, Z.~Guo, H.~Zhang, X.~Xu, and H.~T. Shen, ``Video captioning with
+  attention-based lstm and semantic consistency,'' {\em IEEE Transactions on
+  Multimedia}, vol.~19, no.~9, pp.~2045--2055, 2017.
+
 \bibitem{wu2018hierarchical}
 C.~Wu, Y.~Wei, X.~Chu, S.~Weichen, F.~Su, and L.~Wang, ``Hierarchical
   attention-based multimodal fusion for video captioning,'' {\em
   Neurocomputing}, vol.~315, pp.~362--370, 2018.
-
-\bibitem{vaswani2017attention}
-A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez,
-  {\L}.~Kaiser, and I.~Polosukhin, ``Attention is all you need,'' in {\em
-  Advances in Neural Information Processing Systems}, pp.~5998--6008, 2017.
 
 \end{thebibliography}

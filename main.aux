@@ -22,16 +22,14 @@
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}}
 \citation{lopez2008statistical}
 \citation{cho2014learning}
-\citation{cho2014learning}
 \citation{cho2014properties}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Encoder-Decoder Framework's Applications}{3}{subsection.1.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Baseline Encoder-Decoder Model}{5}{section.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Baseline Encoder-Decoder Model}{4}{section.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Background}{5}{subsection.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The basic scheme of the encoder-decoder model}}{5}{figure.1}}
+\newlabel{fig:encdec}{{1}{5}{The basic scheme of the encoder-decoder model}{figure.1}{}}
 \citation{cho2014learning}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The basic scheme of the encoder-decoder model}}{6}{figure.1}}
-\newlabel{fig:encdec}{{1}{6}{The basic scheme of the encoder-decoder model}{figure.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}The encoder-decoder model for machine translation}{6}{section.3}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.0.1}Formulation}{6}{subsubsection.3.0.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Formulation}{6}{subsection.3.1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces One-hot vector for each word in a sample dictionary. Sentences can also be modeled using \textit  {Bag of Words} (BoW) technique in which the presence of a word in the sentence is considered without any information about the order of words.}}{7}{figure.2}}
 \newlabel{fig:onehot}{{2}{7}{One-hot vector for each word in a sample dictionary. Sentences can also be modeled using \textit {Bag of Words} (BoW) technique in which the presence of a word in the sentence is considered without any information about the order of words}{figure.2}{}}
 \citation{cho2014learning}
@@ -39,20 +37,20 @@
 \citation{cho2014learning}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces An illustration of the first encoder-decoder based model proposed by Cho et al. \cite  {cho2014learning}.}}{8}{figure.3}}
 \newlabel{fig:encdec1}{{3}{8}{An illustration of the first encoder-decoder based model proposed by Cho et al. \cite {cho2014learning}}{figure.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.0.2}Encoders (feature extraction)}{8}{subsubsection.3.0.2}}
-\newlabel{eq:hidden1}{{1}{9}{Encoders (feature extraction)}{equation.3.1}{}}
-\newlabel{eq:context1}{{2}{9}{Encoders (feature extraction)}{equation.3.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.0.3}Decoders (language modeling)}{9}{subsubsection.3.0.3}}
-\newlabel{eq:obj1}{{3}{9}{Decoders (language modeling)}{equation.3.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Encoders in MT (feature extraction)}{8}{subsection.3.2}}
+\newlabel{eq:hidden1}{{1}{8}{Encoders in MT (feature extraction)}{equation.3.1}{}}
+\newlabel{eq:context1}{{2}{9}{Encoders in MT (feature extraction)}{equation.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Decoders in MT (language modeling)}{9}{subsection.3.3}}
+\newlabel{eq:obj1}{{3}{9}{Decoders in MT (language modeling)}{equation.3.3}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Directed Acyclic Graph of dependecies of random variables in the encoder-decoder model}}{9}{figure.4}}
 \newlabel{fig:BNI}{{4}{9}{Directed Acyclic Graph of dependecies of random variables in the encoder-decoder model}{figure.4}{}}
+\newlabel{eq:obj2}{{4}{9}{Decoders in MT (language modeling)}{equation.3.4}{}}
 \citation{cho2014learning}
-\newlabel{eq:obj2}{{4}{10}{Decoders (language modeling)}{equation.3.4}{}}
-\newlabel{eq:obj3}{{5}{10}{Decoders (language modeling)}{equation.3.5}{}}
-\newlabel{eq:obj4}{{6}{10}{Decoders (language modeling)}{equation.3.6}{}}
-\newlabel{eq:obj03}{{7}{10}{Decoders (language modeling)}{equation.3.7}{}}
-\newlabel{eq:loglikelihood1}{{8}{10}{Decoders (language modeling)}{equation.3.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Encoder Structures}{10}{section.4}}
+\newlabel{eq:obj3}{{5}{10}{Decoders in MT (language modeling)}{equation.3.5}{}}
+\newlabel{eq:obj4}{{6}{10}{Decoders in MT (language modeling)}{equation.3.6}{}}
+\newlabel{eq:obj03}{{7}{10}{Decoders in MT (language modeling)}{equation.3.7}{}}
+\newlabel{eq:loglikelihood1}{{8}{10}{Decoders in MT (language modeling)}{equation.3.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Encoder Structure Varieties}{10}{section.4}}
 \citation{gehring2016convolutional}
 \citation{hochreiter1997long}
 \citation{sutskever2014sequence}
@@ -64,8 +62,6 @@
 \citation{mi2016coverage}
 \citation{he2016dual}
 \citation{tu2017context}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Sentence as input}{11}{subsection.4.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Image as input}{11}{subsection.4.2}}
 \citation{simonyan2014very}
 \citation{krizhevsky2012imagenet}
 \citation{deng2009imagenet}
@@ -82,12 +78,15 @@
 \citation{ioffe2015batch}
 \citation{vinyals2015show}
 \citation{liu2017improved}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Sentence as input}{11}{subsection.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Image as input}{11}{subsection.4.2}}
+\newlabel{eq:imgCont}{{9}{11}{Image as input}{equation.4.9}{}}
 \citation{vinyals2015show}
 \citation{vinyals2015show}
 \citation{vinyals2015show}
-\newlabel{eq:imgCont}{{9}{12}{Image as input}{equation.4.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Model architecture based on encoder-decoder framework for image captioning \cite  {vinyals2015show}}}{12}{figure.5}}
+\newlabel{fig:imgCpt}{{5}{12}{Model architecture based on encoder-decoder framework for image captioning \cite {vinyals2015show}}{figure.5}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Video as input}{12}{subsection.4.3}}
-\newlabel{eq:vid1}{{10}{12}{Video as input}{equation.4.10}{}}
 \citation{venugopalan2014translating}
 \citation{venugopalan2014translating}
 \citation{venugopalan2014translating}
@@ -95,31 +94,30 @@
 \citation{szegedy2017inception}
 \citation{majd2018correlation}
 \citation{majd2019motion}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Model architecture based on encoder-decoder framework for image captioning \cite  {vinyals2015show}}}{13}{figure.5}}
-\newlabel{fig:imgCpt}{{5}{13}{Model architecture based on encoder-decoder framework for image captioning \cite {vinyals2015show}}{figure.5}{}}
+\citation{yao2015describing}
+\newlabel{eq:vid1}{{10}{13}{Video as input}{equation.4.10}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}3D-CNNs}{13}{subsubsection.4.3.1}}
 \citation{yao2015describing}
 \citation{yao2015describing}
+\citation{pan2016jointly}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces An illustration of the first encoder-decoder based model for video description generation proposed by venugopalan et al. in 2015 \cite  {venugopalan2014translating}}}{14}{figure.6}}
 \newlabel{fig:vid1}{{6}{14}{An illustration of the first encoder-decoder based model for video description generation proposed by venugopalan et al. in 2015 \cite {venugopalan2014translating}}{figure.6}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}3D-CNNs}{14}{subsubsection.4.3.1}}
-\citation{yao2015describing}
-\citation{pan2016jointly}
 \citation{pan2016jointly}
 \citation{li2018jointly}
+\citation{krishna2017dense}
+\citation{krishna2017dense}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The structure of 3D-CNN proposed by Yao et al. in 2015 \cite  {yao2015describing}}}{15}{figure.7}}
 \newlabel{fig:3dcnn}{{7}{15}{The structure of 3D-CNN proposed by Yao et al. in 2015 \cite {yao2015describing}}{figure.7}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}Dense video captioning}{15}{subsubsection.4.3.2}}
 \citation{krishna2017dense}
-\citation{krishna2017dense}
-\citation{krishna2017dense}
 \citation{escorcia2016daps}
+\citation{krishna2017dense}
+\citation{krishna2017dense}
+\citation{li2018jointly}
+\citation{li2018jointly}
+\citation{li2018jointly}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces An illustration of the encoder part of the proposed model by Pan et al. \cite  {pan2016jointly}}}{16}{figure.8}}
 \newlabel{fig:3dcnn2}{{8}{16}{An illustration of the encoder part of the proposed model by Pan et al. \cite {pan2016jointly}}{figure.8}{}}
-\citation{krishna2017dense}
-\citation{krishna2017dense}
-\citation{li2018jointly}
-\citation{li2018jointly}
-\citation{li2018jointly}
 \citation{li2018jointly}
 \citation{li2018jointly}
 \citation{shen2017weakly}
@@ -130,7 +128,8 @@
 \newlabel{fig:dense1}{{9}{17}{An illustration of the first proposed encoder model for dense video captioning by Krishna et al. \cite {krishna2017dense}}{figure.9}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces An illustration of the encoder-decoder structure proposed by Li et al. for dense video captioning \cite  {li2018jointly}}}{18}{figure.10}}
 \newlabel{fig:dense2}{{10}{18}{An illustration of the encoder-decoder structure proposed by Li et al. for dense video captioning \cite {li2018jointly}}{figure.10}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Decoder Structures}{18}{section.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Decoder Structure Varieties}{18}{section.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Long term dependencies}{18}{subsection.5.1}}
 \citation{goodfellow2016deep}
 \citation{cho2014learning}
 \citation{bahdanau2014neural}
@@ -140,7 +139,6 @@
 \citation{luong2014addressing}
 \citation{donahue2015long}
 \citation{gu2018stack}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Long term dependencies}{19}{subsection.5.1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2}LSTMs}{19}{subsection.5.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Stacked RNNs}{19}{subsection.5.3}}
 \citation{venugopalan2014translating}
@@ -173,38 +171,44 @@
 \newlabel{eq:reinf2}{{12}{24}{Reinforcement learning}{equation.5.12}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces An illustration of the unrolled decoder proposed by Wang et al. \cite  {wang2018video}.}}{24}{figure.14}}
 \newlabel{fig:reinf2}{{14}{24}{An illustration of the unrolled decoder proposed by Wang et al. \cite {wang2018video}}{figure.14}{}}
-\newlabel{eq:reinf3}{{13}{25}{Reinforcement learning}{equation.5.13}{}}
-\newlabel{eq:reinf4}{{14}{25}{Reinforcement learning}{equation.5.14}{}}
-\newlabel{eq:reinf5}{{15}{25}{Reinforcement learning}{equation.5.15}{}}
+\newlabel{eq:reinf3}{{13}{24}{Reinforcement learning}{equation.5.13}{}}
+\newlabel{eq:reinf4}{{14}{24}{Reinforcement learning}{equation.5.14}{}}
+\newlabel{eq:reinf5}{{15}{24}{Reinforcement learning}{equation.5.15}{}}
 \newlabel{eq:reinf6}{{16}{25}{Reinforcement learning}{equation.5.16}{}}
 \newlabel{eq:reinf7}{{17}{25}{Reinforcement learning}{equation.5.17}{}}
-\newlabel{eq:drtn}{{19}{25}{Reinforcement learning}{equation.5.19}{}}
-\newlabel{eq:reinf8}{{20}{25}{Reinforcement learning}{equation.5.20}{}}
+\newlabel{eq:drtn}{{18}{25}{Reinforcement learning}{equation.5.18}{}}
+\newlabel{eq:reinf8}{{19}{25}{Reinforcement learning}{equation.5.19}{}}
 \citation{papineni2002bleu}
 \citation{bahdanau2014neural}
-\newlabel{eq:nabla}{{23}{26}{Reinforcement learning}{equation.5.23}{}}
-\newlabel{eq:reinf9}{{24}{26}{Reinforcement learning}{equation.5.24}{}}
-\newlabel{eq:reinf10}{{25}{26}{Reinforcement learning}{equation.5.25}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Attention Mechanism}{26}{section.6}}
 \citation{bahdanau2014neural}
+\newlabel{eq:nabla}{{22}{26}{Reinforcement learning}{equation.5.22}{}}
+\newlabel{eq:reinf9}{{23}{26}{Reinforcement learning}{equation.5.23}{}}
+\newlabel{eq:reinf10}{{24}{26}{Reinforcement learning}{equation.5.24}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Attention Mechanism}{26}{section.6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Basic Mechanism}{26}{subsection.6.1}}
 \citation{xu2015show}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Basic Mechanism}{27}{subsection.6.1}}
-\newlabel{eq:attn1}{{26}{27}{Basic Mechanism}{equation.6.26}{}}
-\newlabel{eq:attn2}{{27}{27}{Basic Mechanism}{equation.6.27}{}}
+\newlabel{eq:attn1}{{25}{27}{Basic Mechanism}{equation.6.25}{}}
+\newlabel{eq:attn2}{{26}{27}{Basic Mechanism}{equation.6.26}{}}
+\newlabel{eq:attn3}{{27}{27}{Basic Mechanism}{equation.6.27}{}}
+\newlabel{eq:attn4}{{28}{27}{Basic Mechanism}{equation.6.28}{}}
 \citation{xu2015show}
+\citation{vaswani2017attention}
+\citation{vaswani2017attention}
 \citation{you2016image}
 \citation{lu2017knowing}
+\citation{gao2017video}
 \citation{wu2018hierarchical}
-\citation{vaswani2017attention}
-\citation{vaswani2017attention}
-\newlabel{eq:attn3}{{28}{28}{Basic Mechanism}{equation.6.28}{}}
-\newlabel{eq:attn4}{{29}{28}{Basic Mechanism}{equation.6.29}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Extensions}{28}{subsection.6.2}}
+\citation{wu2018hierarchical}
+\citation{wu2018hierarchical}
+\citation{wu2018hierarchical}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Different attention layers proposed by Wu et al. \cite  {wu2018hierarchical}.}}{29}{figure.15}}
+\newlabel{fig:attnss}{{15}{29}{Different attention layers proposed by Wu et al. \cite {wu2018hierarchical}}{figure.15}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{29}{section.7}}
 \bibdata{ref}
 \bibcite{lopez2008statistical}{{1}{}{{}}{{}}}
 \bibcite{cho2014learning}{{2}{}{{}}{{}}}
 \bibcite{cho2014properties}{{3}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{29}{section.7}}
 \bibcite{gehring2016convolutional}{{4}{}{{}}{{}}}
 \bibcite{hochreiter1997long}{{5}{}{{}}{{}}}
 \bibcite{sutskever2014sequence}{{6}{}{{}}{{}}}
@@ -241,23 +245,25 @@
 \bibcite{escorcia2016daps}{{37}{}{{}}{{}}}
 \bibcite{shen2017weakly}{{38}{}{{}}{{}}}
 \bibcite{duan2018weakly}{{39}{}{{}}{{}}}
-\bibcite{wang2018bidirectional}{{40}{}{{}}{{}}}
-\bibcite{goodfellow2016deep}{{41}{}{{}}{{}}}
-\bibcite{luong2015effective}{{42}{}{{}}{{}}}
-\bibcite{wu2016google}{{43}{}{{}}{{}}}
-\bibcite{johnson2017google}{{44}{}{{}}{{}}}
-\bibcite{luong2014addressing}{{45}{}{{}}{{}}}
-\bibcite{donahue2015long}{{46}{}{{}}{{}}}
-\bibcite{gu2018stack}{{47}{}{{}}{{}}}
-\bibcite{pan2016hierarchical}{{48}{}{{}}{{}}}
-\bibcite{yu2016video}{{49}{}{{}}{{}}}
-\bibcite{Asadi2019stacked}{{50}{}{{}}{{}}}
-\bibcite{wang2018video}{{51}{}{{}}{{}}}
-\bibcite{vedantam2015cider}{{52}{}{{}}{{}}}
-\bibcite{banerjee2005meteor}{{53}{}{{}}{{}}}
-\bibcite{papineni2002bleu}{{54}{}{{}}{{}}}
-\bibcite{you2016image}{{55}{}{{}}{{}}}
-\bibcite{wu2018hierarchical}{{56}{}{{}}{{}}}
-\bibcite{vaswani2017attention}{{57}{}{{}}{{}}}
+\bibcite{zhou2018end}{{40}{}{{}}{{}}}
+\bibcite{wang2018bidirectional}{{41}{}{{}}{{}}}
+\bibcite{goodfellow2016deep}{{42}{}{{}}{{}}}
+\bibcite{luong2015effective}{{43}{}{{}}{{}}}
+\bibcite{wu2016google}{{44}{}{{}}{{}}}
+\bibcite{johnson2017google}{{45}{}{{}}{{}}}
+\bibcite{luong2014addressing}{{46}{}{{}}{{}}}
+\bibcite{donahue2015long}{{47}{}{{}}{{}}}
+\bibcite{gu2018stack}{{48}{}{{}}{{}}}
+\bibcite{pan2016hierarchical}{{49}{}{{}}{{}}}
+\bibcite{yu2016video}{{50}{}{{}}{{}}}
+\bibcite{Asadi2019stacked}{{51}{}{{}}{{}}}
+\bibcite{wang2018video}{{52}{}{{}}{{}}}
+\bibcite{vedantam2015cider}{{53}{}{{}}{{}}}
+\bibcite{banerjee2005meteor}{{54}{}{{}}{{}}}
+\bibcite{papineni2002bleu}{{55}{}{{}}{{}}}
+\bibcite{vaswani2017attention}{{56}{}{{}}{{}}}
+\bibcite{you2016image}{{57}{}{{}}{{}}}
+\bibcite{gao2017video}{{58}{}{{}}{{}}}
+\bibcite{wu2018hierarchical}{{59}{}{{}}{{}}}
 \bibstyle{ieeetr}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
