@@ -1,0 +1,16 @@
+- title
+- p4 -> meaning vector -> latent vector
+- p6 -> the model proposed by Cho et al.
+- p10 -> can be expressed in equation (9)
+- p15 -> introduction paragraph changed (decoders output)
+- p25 -> excluded sentence: The results reported in .... 
+- p2 -> exists -> exist
+- p4 -> often-sequential
+- p4 -> removed meaning space
+- p2 -> added CNN, added RNN
+- p3 -> remove convolutional ...
+- p6 -> remove recurrent ...
+- p10 -> removed recurrent ... added RNN
+- p14 -> this model --> the proposed model
+
+

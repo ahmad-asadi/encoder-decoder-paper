@@ -1,5 +1,6 @@
 %\documentclass[12pt, a4paper]{article}
-\documentclass[preprint, 12pt]{elsarticle}
+\documentclass[preprint, 10pt]{elsarticle}
+
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{float}
@@ -39,7 +40,7 @@
 		\address{Department of Computer Engineering and Information Technology, Amirkabir University of Technology}
 		% \fntext[label3]{label3}
 		
-		\title{The Ecoder-Decoder Framework and its Applications}
+		\title{The Encoder-Decoder Framework and its Applications}
 		
 		%% use optional labels to link authors explicitly to addresses:
 		%% \author[label1,label2]{}
@@ -114,6 +115,8 @@ Some of the tasks in which the encoder-decoder model is used to solve the proble
 	
 	It can be easily seen that the baseline architecture proposed in machine translation is also used in other tasks with minor changes. In addition, the decoders of the models in different tasks are similar since most of them are used to generate a sentence word by word to describe the meaning of the input represented by the feature  vector. On the other hand, a wide variety of encoders are used in order to extract appropriate feature vectors depending on the input types in different tasks. 
 	
+	The next section of this chapter discusses the baseline encoder-decoder model. The first encoder-decoder based model proposed in machine translation is introduced in section 3. Section 4, discusses different types of encoders and their applications in details and makes a general perspective of the encoder structures in different problems. Section 5, provides a comprehensive study of the decoder structures, techniques of making deeper decoders, along with their applications in image/video caption generation. Section 6, introduces the attention mechanism and its usage in machine translation, Followed by an empirical study of the attention mechanism in other problems.
+	
 	\section{Baseline Encoder-Decoder Model}
 	In this section, we introduce the very baseline encoder-decoder model. To give a clear picture of the idea, the basic structure for solving the machine translation task is presented in which the model is designed to translate a sentence from a source language to a destination one.  
 		\subsection{Background}
@@ -122,7 +125,7 @@ Some of the tasks in which the encoder-decoder model is used to solve the proble
 		The main idea behind the framework is that the process of generating output can be divided into two subprocesses as follows:
 		\begin{enumerate}
 			\item Encoding phase: A given input is first projected into another space by a projection function, called "\textit{encoder}", in order to provide a "\textit{good representation}" of the input. The encoder can also be viewed as a feature extractor from the input and the projection process can be expressed by a feature extraction process. The second space can be the "\textit{feature space}" or the "\textit{meaning space}", because the projected point represents the meaning of the input and all necessary information from the input that can help to generate the desired output.
-			\item Decoding phase: After encoding phase, a "\textit{meaning vector}" is generated for the given input that well represents its meaning. In the second phase, another projection function, called "\textit{decoder}", is required to map the meaning vector to the output space.
+			\item Decoding phase: After encoding phase, a "\textit{latent vector}" is generated for the given input that well represents its meaning. In the second phase, another projection function, called "\textit{decoder}", is required to map the latent vector to the output space.
 		\end{enumerate} 
 	
 		Figure \ref{fig:encdec} demonstrates the basic schema of the encoder-decoder framework. Let $X = \{X_0, X_1, \cdots, X_n\}$ denote the inputs and $Y = \{Y_0, Y_1, \cdots, Y_m\}$ denote the outputs of the problem. The decoder extracts a feature vector from the input and passes it to the decoder. The decoder then generates the output based on the features extracted by the encoder.
@@ -133,8 +136,7 @@ Some of the tasks in which the encoder-decoder model is used to solve the proble
 			\label{fig:encdec}
 		\end{figure}
 		
-		The first section of this chapter introduces the baseline encoder-decoder model and its application in machine translation. Section 2, discusses different types of encoders and their applications in details and makes a general perspective of the encoder structures in different problems. Section 3, provides a comprehensive study of the decoder structures, techniques of making deeper decoders, along with their applications in image/video caption generation. Section 4, introduces the attention mechanism and its usage in machine translation, Followed by an empirical study of the attention mechanism in other problems.
-	
+		
 	
 	\section{The encoder-decoder model for machine translation}
 	Machine translation is the problem in which the encoder-decoder based models were originated and proposed first. The basic concepts of these models are shaped and presented in the machine translation literature. In this section we introduce the basic encoder-decoder structure proposed for machine translation by Cho et al. \cite{cho2014learning} to shed light on the model and its basics.
@@ -159,7 +161,7 @@ Some of the tasks in which the encoder-decoder model is used to solve the proble
 			Another RNN is used to generate the words of the output sentence in an appropriate order. The decoder RNN is designed to predict a probability distribution over all possible words in the dictionary of the source language words at each step. Then a word is selected with respect to the produced probability distribution as the next word in the sentence. The iteration is stopped when the EOS token is generated by the decoder or a predefined number of words are generated.
 		\end{enumerate}
 		
-		The structure of the proposed model is show in figure \ref{fig:encdec1}. The context vector extracted by the encoder is denoted by $C$, which is the hidden state of the RNN encoder at the last step.
+		The structure of the model proposed by Cho et al. is show in figure \ref{fig:encdec1}. The context vector extracted by the encoder is denoted by $C$, which is the hidden state of the RNN encoder at the last step.
 		\begin{figure}[h]
 			\centering
 			\includegraphics[scale=0.6]{Imgs/encdec1.png}
@@ -230,7 +232,7 @@ Some of the tasks in which the encoder-decoder model is used to solve the proble
 		\subsection{Image as input}
 		Encoder-Decoder based architectures form a majority of the proposed models to generate captions for images. In such models, the process of generating captions for the input image is divided into two steps. The first step is encoding in which a feature vector extracted from the image is returned as the context vector. The second step is decoding in which the generated context vector is passed to a decoder to generate sentences describing the context. 
 		
-		The best choice for encoders in such problems is the convolutional neural network. Almost all of the proposed models for image captioning based on the encoder-decoder framework use different types of CNNs as the encoders. Neural encoder-decoder based approaches to image captioning share the same structure for decoder, while in most of them the encoder consists of a single CNN. So, the extracted feature vector from the image can be expressed in \eqref{eq:imgCont} in which $X$ is the input image, $CNN(X)$ is the output of the CNN network, and $C$ is the context vector passed to the decoder.
+		The best choice for encoders in such problems is the convolutional neural network. Almost all of the proposed models for image captioning based on the encoder-decoder framework use different types of CNNs as the encoders. Neural encoder-decoder based approaches to image captioning share the same structure for decoder, while in most of them the encoder consists of a single CNN. So, the extracted feature vector from the image can be expressed in equation \eqref{eq:imgCont} in which $X$ is the input image, $CNN(X)$ is the output of the CNN network, and $C$ is the context vector passed to the decoder.
 		
 		\begin{equation}
 			C = CNN(X)
@@ -388,7 +390,7 @@ Some of the tasks in which the encoder-decoder model is used to solve the proble
 		
 		\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.8]{Imgs/reinf2.png}
+		\includegraphics[scale=0.7]{Imgs/reinf2.png}
 		\caption{An illustration of the unrolled decoder proposed by Wang et al. \cite{wang2018video}.}
 		\label{fig:reinf2}
 	\end{figure}
@@ -505,7 +507,7 @@ Figure \ref{fig:attnss} displays the structure of different attention layers pro
 %		
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.45]{Imgs/attentions.png}
+			\includegraphics[scale=0.4]{Imgs/attentions.png}
 			\caption{Different attention layers proposed by Wu et al. \cite{wu2018hierarchical}.}
 			\label{fig:attnss}
 		\end{figure}
@@ -517,13 +519,14 @@ Figure \ref{fig:attnss} displays the structure of different attention layers pro
 		
 		The structure of the encoder varies based on the input type. Whenever the input is a text or a sequence, an RNN is used as the encoder. When the input is an image, CNNs can be used to encode the input image. If that the input is a video a combination of CNNs and RNNs is used to first extract features from all of the input frames and then model temporal dependencies between different frames. 3D-CNNs are also proposed to extract motion data from the input. More complex models to detect and localize events in the input video for dense video captioning are also discussed.
 		
-		Extracting long term dependencies and generating rich fine-grained sentences are the main problems of decoders in the encoder-decoder based models. LSTM cells are the simplest models that can cope with the problem of long term dependencies, and are used in the proposed architectures for different tasks. Using stacked structures of RNNs is another approach to make deeper decoders. This allows the models to cope with the long term dependency challenge and generate more detailed sentences. One of the most important problems of the stacked decoder structures is the problem of the vanishing gradients which can be solved by modifying the optimization problem of the decoder. Another approach to cope with the problem of long term dependencies is using the attention mechanism, which is a technique to focus more on different portions of the input, while generating outputs at each step. The results reported in the literature indicate the superior performance of the encoder-decoder architecture in a variety of tasks.
+		Extracting long term dependencies and generating rich fine-grained sentences are the main problems of decoders in the encoder-decoder based models. LSTM cells are the simplest models that can cope with the problem of long term dependencies, and are used in the proposed architectures for different tasks. Using stacked structures of RNNs is another approach to make deeper decoders. This allows the models to cope with the long term dependency challenge and generate more detailed sentences. One of the most important problems of the stacked decoder structures is the problem of the vanishing gradients which can be solved by modifying the optimization problem of the decoder. Another approach to cope with the problem of long term dependencies is using the attention mechanism, which is a technique to focus more on different portions of the input, while generating outputs at each step. 
+%		The results reported in the literature indicate the superior performance of the encoder-decoder architecture in a variety of tasks.
+		\\
 		
 	\begin{large}
 		\textbf{References}
 	\end{large}
 		
-
 	\bibliography{ref}
 	\bibliographystyle{ieeetr}
 \end{document}
